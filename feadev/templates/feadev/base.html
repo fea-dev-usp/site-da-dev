@@ -1,0 +1,221 @@
+{% load static %}
+
+
+
+<!doctype html>
+<html lang="pt-br">
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FEA.dev">
+  <link rel="stylesheet" href="{% static 'componentes/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="icon" type='image/png' href="../static/img/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/axe-core@4.0.2/axe.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/micro-slider@1.0.9/dist/micro-slider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+
+  <title>FEA.dev</title>
+
+</head>
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">
+            <img src="../static/img/Logo.png" alt="" width="70" height="70" class="d-inline-block align-text-top"></a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav">
+              <div class="dropdown">
+              <a class="nav-link" aria-current="page" href="{% url 'index' %}">Inicio</a>
+                <div class="dropdown-content" >
+                  <a href="{% url 'index' %}#trajetoria">Trajetória</a>
+                  <a href="{% url 'index' %}#relatos">Relatos</a>
+                  <a href="{% url 'index' %}#valores">Valores</a>
+                  <a href="{% url 'index' %}#parcerias">Parcerias</a>
+                  <a href="{% url 'index' %}#estrutura">Estrutura</a>           
+                </div>
+              </div>
+              </li>
+              <ul class="navbar-nav">
+                <div class="dropdown">
+                <a class="nav-link" href="{% url 'grupo_estudo' %}">Grupo de Estudos</a>
+                  <div class="dropdown-content">
+                    <a href="{% url 'grupo_estudo' %}#machine">Machine Learning</a>
+                    <a href="{% url 'grupo_estudo' %}#f_quanticas">Finanças Quânticas</a>
+                    <a href="{% url 'grupo_estudo' %}#the_office">The Office</a>
+                    <a href="{% url 'grupo_estudo' %}#contagramacao">Contagramação</a>
+                </div>
+              </div>    
+              <div class="dropdown">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'atividades' %}">Atividades</a>
+                  <div class="dropdown-content">
+                    <a href="{% url 'atividades' %}#curso_python">Curso de Python</a>
+                    <a href="{% url 'atividades' %}#conteudo">Conteúdo</a>
+                    <a href="{% url 'atividades' %}#visitas">Visitas</a>
+                  </div>
+                  </div>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'membro_change_list' %}">Membros</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contato' %}">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'admin:index' %}">Admin</a></li>
+              </li>
+          </ul>
+      </div>
+      <div class="navbar-nav">
+        <li class="nav-item">
+            <button type="button" class="btn btn-link" onclick="aumentaZoom()">
+                <i class="bi bi-plus-circle"></i>
+            </button>
+            <button type="button" class="btn btn-link" onclick="diminuiZoom()">
+                <i class="bi bi-dash-circle"></i>
+            </button>
+            <button type="button" class="btn btn-link" onclick="resetZoom()">
+                <i class="bi bi-arrow-repeat"></i>
+            </button>
+            <button type="button" class="btn btn-link" onclick="alternarTema()">
+                <i class="bi bi-mask"></i>
+            </button>
+        </li>
+    </div>
+    </div>
+  </nav>
+    
+
+
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+
+  <footer>
+    <div class="social-links">
+      <a target="_blank" href="https://www.linkedin.com/company/fea-dev">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a target="_blank" href="https://github.com/fea-dev-usp">
+        <i class="bi bi-github"></i>
+      </a>
+      <a target="_blank" href="https://www.youtube.com/@FEADev">
+        <i class="bi bi-youtube"></i>
+      </a>
+      <a target="_blank" href="https://instagram.com/fea.dev">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a target="_blank" href="https://facebook.com/fea.dev">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a target="_blank" href="https://twitter.com/fea_dev">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a target="_blank" href="https://t.me/joinchat/P-bmiOByxvBkOTQx">
+        <i class="bi bi-telegram"></i>
+      </a>
+    </div>
+  </footer>
+
+
+ 
+  <script src="../static/componentes/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  
+
+  <script>
+    function aumentaZoom() {
+      var elementosTexto = document.querySelectorAll('body *'); 
+      for (let c = 0; c < elementosTexto.length; c++) {
+        const elemento = elementosTexto[c];
+        const fontSize = parseInt(window.getComputedStyle(elemento)['font-size']);
+        elemento.style.fontSize = (fontSize + 1) + 'px';
+      }
+    }
+
+    function diminuiZoom() {
+      var elementosTexto = document.querySelectorAll('body *'); 
+      for (let c = 0; c < elementosTexto.length; c++) {
+        const elemento = elementosTexto[c];
+        const fontSize = parseInt(window.getComputedStyle(elemento)['font-size']);
+        elemento.style.fontSize = (fontSize - 1) + 'px';
+      }
+    }
+
+    function resetZoom() {
+      var elementosTexto = document.querySelectorAll('body *'); 
+      for (let c = 0; c < elementosTexto.length; c++) {
+        const elemento = elementosTexto[c];
+        elemento.style.fontSize = ''; 
+      }
+    }
+
+  
+    function alternarTema() {
+      var tema = document.querySelector("html").getAttribute("data-bs-theme");
+      if (tema === "light") {
+        document.querySelector("html").setAttribute("data-bs-theme", "dark");
+      } else {
+        document.querySelector("html").setAttribute("data-bs-theme", "light");
+      }
+    }
+
+    document.querySelector("html").setAttribute("data-bs-theme", "dark"); 
+
+  
+  
+
+    window.onload = function () {
+      var botoes = document.querySelectorAll("i");
+      for (let i = 0; i < botoes.length; i++) {
+        botoes[0].addEventListener("click", aumentaZoom);
+        botoes[1].addEventListener("click", diminuiZoom);
+        botoes[2].addEventListener("click", resetZoom);
+        botoes[3].addEventListener("click", alternarTema);
+      }
+    }
+  </script>
+
+
+
+
+
+  <div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+  </div>
+
+
+</body>
+
+</html>

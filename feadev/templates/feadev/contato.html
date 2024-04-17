@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+
+<div class="row">
+    <div class="col-md-5">
+        <div class="email">
+            <div>
+                <h5><i class="bi bi-envelope"></i> Email:</h5>
+            </div>
+            <p class="fs-4"><a href="mailto:contato.feadev@gmail.com" target="_blank">contato.feadev@gmail.com</a>
+            </p>
+        </div>
+        <div class="endereco">
+            <h5><i class="bi bi-geo-alt icone-amarelo"></i> Localização:</h5>
+            <p class="fw-light"></p>Av. Prof. Luciano Gualberto, 908 <br> Butantã, São Paulo - SP, 05508-010</p>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1828.6385060424323!2d-46.72879835!3d-23.55849255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce56158eccf83b%3A0x76f2fe97090f63f3!2sAv.%20Prof.%20Luciano%20Gualberto%2C%20908%20-%20Butant%C3%A3%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005508-010!5e0!3m2!1spt-BR!2sbr!4v1679838056799!5m2!1spt-BR!2sbr"
+            width="280" height="200" style="border-radius: 5px;" allowfullscreen="" loading="lazy" class=''></iframe>
+    </div>
+    <div class="col-md-7">
+        <div>
+            <h5><i class="bi bi-chat-left"></i> Escreva uma mensagem para nós:</h5>
+        </div>
+        <form action="/contato/" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input class="btn btn-warning" type="submit" value="Enviar">
+        </form>
+
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+{% endblock %}

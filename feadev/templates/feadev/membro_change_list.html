@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+
+<div class = "container">
+<h1>Membros</h1>
+
+<div class = "categorias">
+    <div>
+    <label for="categoria_filter">Gestão:</label>
+    <select id="categoria_filter">
+        <option value="">Todas</option>
+        {% for categoria in categorias %}
+            <option value="{{ categoria }}">{{ categoria }}</option>
+        {% endfor %}
+    </select>
+    </div>
+
+    <div>
+    <label for="sub_categoria_filter">Área:</label>
+    <select id="sub_categoria_filter">
+        <option value="">Todas</option>
+        {% for sub_categoria in sub_categorias %}
+            <option value="{{ sub_categoria }}">{{ sub_categoria }}</option>
+        {% endfor %}
+    </select>
+    </div>
+
+    <div>
+    <label for="status_filter">Status:</label>
+    <select id="status_filter">
+        <option value="">Todas</option>
+        <option value="ativo">Ativo</option>
+        <option value="inativo">Inativo</option>
+    </select>
+    </div>
+
+    <div>
+    <label for="ano_filter">Ano:</label>
+    <select id="ano_filter">
+        <option value="">Todos</option>
+        {% for ano in anos_unicos %}
+            <option value="{{ ano }}">{{ ano }}</option>
+        {% endfor %}
+    </select>
+    </div>
+    <div>
+    <button id="limpar_filtros">Limpar Filtros</button>
+    </div>
+</div>
+
+
+
+
+<div class="card-body">
+    <div class="membro-grid">
+        {% for membro in membros %}
+            <div class="membro" data-categoria="{{ membro.categoria }}" data-sub_categoria="{{ membro.sub_categoria }}" data-status="{% if membro.ativo %}ativo{% elif membro.inativo %}inativo{% else %}ano{% endif %}" data-ano="{{ membro.ano }}">
+                <img src="{{ membro.imagem.url }}" alt="{{ membro.nome }}" class="member-image">
+                <h5>{{ membro.nome }}</h5>
+                <div class="overlay">
+                    <p class="fw-light">{{ membro.info | slice:"0:350" }}</p>                
+                </div>
+                <p class="fw-light">{{ membro.categoria }}</p>
+                <p class="fw-light">{{ membro.sub_categoria }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>  
+    $(document).ready(function(){
+            $('select').change(function(){
+            var categoria_filter = $('#categoria_filter').val();
+            var sub_categoria_filter = $('#sub_categoria_filter').val();
+            var status_filter = $('#status_filter').val();
+            var ano_filter = $('#ano_filter').val();
+    
+            $('.membro').each(function(){
+                var membro_categoria = $(this).attr('data-categoria');
+                var membro_sub_categoria = $(this).attr('data-sub_categoria');
+                var membro_status = $(this).attr('data-status');
+                var membro_ano = $(this).attr('data-ano');
+    
+                if ((categoria_filter === '' || membro_categoria === categoria_filter) &&
+                    (sub_categoria_filter === '' || membro_sub_categoria === sub_categoria_filter) &&
+                    (status_filter === '' || membro_status === status_filter) &&
+                    (ano_filter === '' || membro_ano === ano_filter)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });    
+
+            $('#limpar_filtros').click(function(){
+                $('select').val(''); 
+                $('.membro').show(); 
+            });
+            
+        });
+    });
+    
+    
+</script>
+
+
+
+<style>
+
+    .categorias {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .membro-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+    .membro {
+        position: relative;
+        overflow: hidden;
+        padding: 10px;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .membro img {
+        width: 90%;
+        border-radius: 0.5rem;
+        transition: transform 0.3s;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(100%);
+        transition: opacity 0.3s, transform 0.3s;
+    }
+    
+    .membro:hover .overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .membro:hover img {
+        transform: scale(1.1);
+    }
+    
+    h1 {
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .membro h5 {
+        margin: 10px 0 10px 0;
+        padding: 0;
+    }
+    
+    .membro p {
+        margin: 0;
+        padding: 0;
+        color: #777;
+    }
+
+    .fw-light {
+        font-weight: lighter;
+        text-align: center;
+      }
+    
+    #categoria_filter, #sub_categoria_filter, #status_filter, #ano_filter {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin: 0 5px 0 0;
+    }
+    
+    #limpar_filtros {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin: 0 5px 0 0;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .membro-grid {
+            grid-template-columns: repeat(3, 1fr); 
+        }
+    }
+
+
+    @media screen and (max-width: 992px) {
+        .membro-grid {
+            grid-template-columns: repeat(3, 1fr); 
+        }
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .membro-grid {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+
+
+    @media screen and (max-width: 480px) {
+        .membro-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    
+
+</style>
+
+{% endblock %}

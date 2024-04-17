@@ -1,0 +1,452 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+
+
+li.nav-item {
+  list-style: none;
+}
+
+a.nav-link {
+  text-decoration: none;
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+button.btn-link {
+  color: #6c757d !important;
+  padding: 0.35rem !important;
+  font-size: 1.2rem;
+}
+
+
+*::-webkit-scrollbar {
+  width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+  height: 7px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 .3rem #00000050;
+  background-color: #fff;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #f7e307;
+}
+
+
+
+/*Home*/
+
+.one {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem 0rem;
+}
+
+.two {
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 5rem 0rem;
+}
+
+.three {
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+div.row#one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div .col-md-8 {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+div .col-md-3 {
+  width: 320px;
+}
+
+div .three {
+  margin: 2rem;
+}
+
+.col-md {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.col-md-3 {
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+
+h6 {
+  font-weight: lighter;
+  text-align: center;
+}
+
+
+
+
+
+
+/* Estrutura*/
+
+div .col {
+  width: 220px;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+div .bg-dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.bg-dark img {
+  width: 60%;
+  margin: 0.5rem;
+  text-align: center;
+  border-radius: 50%;
+  padding: 3px;
+  box-shadow: 1px 1px 5px 2px #f7e307;
+}
+
+.fw-light {
+  font-weight: lighter;
+  text-align: center;
+}
+
+h6 {
+  font-weight: lighter;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+
+/*Grupo de Estudos*/
+
+.bg-dark#estudo img {
+  width: 50%;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+div.bg-dark#estudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  align-self: auto;
+}
+
+div#estudo.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+
+/*Contato*/
+
+.col-md-5 a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+div .button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  width: 80%;
+  border-radius: 5px;
+  padding: 0.3rem;
+  border: none;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+form input:focus {
+  outline: none;
+  border: 1px solid #f7e307;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+textarea {
+  width: 80%;
+  height: 130px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-warning {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 1rem;
+  margin-top: 1rem;
+}
+
+div .col-md-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+div .col-md-7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/*Footer*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.bi {
+  margin: 0.25rem;
+
+}
+
+i {
+  text-decoration: none;
+}
+
+
+
+
+
+
+/*Trajetoria*/
+
+div #timeline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+#issues li p {
+  font-size: 1rem;
+  margin: 2rem 0rem;
+  padding: 2rem;
+}
+
+#timeline {
+  position: relative;
+}
+
+.sociales {
+  text-align: center;
+}
+
+
+#dates {
+  overflow: hidden;
+}
+
+#dates li {
+  list-style: none;
+  float: left;
+  width: 100px;
+  font-size: 24px;
+  text-align: center;
+}
+
+#dates .selected {
+  font-size: 38px;
+}
+
+#issues {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.scrollable {
+  max-height: 200px;
+  overflow: auto;
+}
+
+#issues li {
+  list-style: none;
+  float: left;
+}
+
+li>a {
+  text-decoration: none;
+}
+
+#issues li h1 {
+  color: #f7e307;
+  font-size: 48px;
+  margin: 20px 0;
+  text-shadow: #000 1px 1px 2px;
+  padding-left: 30px;
+}
+
+#grad_left,
+#grad_right {
+  width: 100px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+}
+
+#next,
+#prev {
+  position: absolute;
+  top: 0;
+  font-size: 70px;
+  top: 170px;
+  width: 22px;
+  height: 38px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+#next.disabled,
+#prev.disabled {
+  opacity: 0.2;
+}
+
+
+
+
+
+
+
+/* Dropdown Button */
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

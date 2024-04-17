@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h2 class="curso-title text-center">Curso de Python</h2>
+<div class="row">
+  <div class="col-md-6 curso-image">
+    <img src="../static/img/curso_python.png" alt="Curso de Python" class="curso_python img-fluid">
+  </div>
+
+  <div class="col-md-6 curso-description">
+    <p class="fw-light">
+      O que é o Lorem Ipsum? O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão.
+      O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500,
+      quando uma misturou os caracteres de um texto para criar um espécime de livro.
+    </p>
+    <div class="curso-button text-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKWGhpQDxNbsRqUBZc3eLWo7UCBO9Uojh-yWMGtAWPu6M6mg/viewform"
+        class="btn btn-sm btn-primary mx-auto">Inscreva-se</a>
+    </div>
+    <div class="countdown text-center">
+      <p id="demo"></p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .curso-title {
+    margin-top: 1rem;
+    padding: 2rem;
+  }
+
+  .curso-description p {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+  }
+
+  .curso_python {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+<script>
+  var countDownDate = new Date("Nov 12, 2023 22:14:25").getTime();
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "Prazo de Inscrição Encerrado";
+    }
+  }, 1000);
+</script>
+
+
+
+
+<hr>
+
+
+
+
+
+
+<div class="container">
+  <h2 class="two" id="conteudo">Página Conteúdo</h2>
+  <h1 class="one">A SER DESENVOLVIDO</h1>
+  <p class="fw-light"> Aguardando o Material da FEA </p>
+</div>
+
+<hr>
+
+<div class="container">
+  <h2 class="two" id='visitas'>Página Visitas</h2>
+  <h1 class="one">A SER DESENVOLVIDO</h1>
+  <p class="fw-light"> Aguardando o Material da FEA </p>
+</div>
+
+<hr>
+
+
+{% endblock %}
