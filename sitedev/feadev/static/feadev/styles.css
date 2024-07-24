@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+body {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* h1 {
+    font-family: Glacial Indifference, sans-serif;
+} */
+
+:root {
+    --color-primary: #202020;
+    --color-secondary: #F8E91F;
+    --color-tertiary: #FDFCF1;
+}
+
+
+
