@@ -1,20 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
-class User(AbstractUser):
-    posicao = models.ForeignKey("Posicao", on_delete=models.CASCADE, related_name="user_position", default=None, blank=True, null=True)
-    grupo = models.ManyToManyField("Grupo", on_delete=models.CASCADE, related_name="user_group", blank=True, null=True, default=None)
-    area = models.ForeignKey("Area", on_delete=models.CASCADE, related_name="user_area", default=None, blank=True, null=True)
-    n_usp = models.IntegerField(primary_key=True)
-    data_nascimento = models.DateField()
-    curso = models.CharField(max_length=100)
-    foto = models.ImageField(upload_to="./media/image", blank=True, null=True)
-    data_entrada = models.DateField()
-    situacao = models.BooleanField()
-    projetos = models.ManyToManyField("Projeto", on_delete=models.CASCADE, related_name="user_project", blank=True, null=True, default=None)
-
+class Posicao(models.Model):
+    nome = models.CharField(max_length=100)
+    
     def __str__(self):
-        return f"{self.username}"
+        return self.nome
 
 class Grupo(models.Model):
     nome = models.CharField(max_length=30)
@@ -22,7 +13,7 @@ class Grupo(models.Model):
     reuniao = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.nome}"
+        return self.nome
 
 class Area(models.Model):
     nome = models.CharField(max_length=30)
@@ -30,34 +21,49 @@ class Area(models.Model):
     reuniao = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.nome}" 
-    
-class Cargo(models.Model):
-    cargo = models.CharField(max_length=30)
-    semestre = models.DateField()
-    usuario = models.ForeignKey("User", on_delete=models.CASCADE, related_name="posicao_usuario")
+        return self.nome
 
-    def __str__(self):
-        return f"{self.usuario}: {self.cargo}"
-    
 class Projeto(models.Model):
     tipo = models.CharField(max_length=100)
-    grupo = models.ManyToManyField("Grupo", on_delete=models.CASCADE, related_name="user_group", blank=True, null=True, default=None)
-    area = models.ForeignKey("Area", on_delete=models.CASCADE, related_name="user_area", default=None, blank=True, null=True)
+    grupo = models.ManyToManyField(Grupo, related_name="projetos", blank=True)
+    area = models.ForeignKey(Area, on_delete=models.CASCADE, related_name="projetos", blank=True, null=True)
     repositorio = models.URLField()
 
     def __str__(self):
-        return f"{self.repositorio}: {self.tipo}"
-    
+        return self.tipo
+
+class User(AbstractUser):
+    posicao = models.ForeignKey(Posicao, on_delete=models.CASCADE, related_name="users", default=None, blank=True, null=True)
+    grupo = models.ManyToManyField(Grupo, related_name="users", blank=True)
+    area = models.ForeignKey(Area, on_delete=models.CASCADE, related_name="users", default=None, blank=True, null=True)
+    n_usp = models.IntegerField(primary_key=True)
+    data_nascimento = models.DateField()
+    curso = models.CharField(max_length=100)
+    foto = models.ImageField(upload_to="image/", blank=True, null=True)
+    data_entrada = models.DateField()
+    situacao = models.BooleanField()
+    projetos = models.ManyToManyField(Projeto, related_name="users", blank=True)
+
+    def __str__(self):
+        return self.username
+
+class Cargo(models.Model):
+    cargo = models.CharField(max_length=30)
+    semestre = models.DateField()
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name="cargos")
+
+    def __str__(self):
+        return f"{self.usuario}: {self.cargo}"
+
 class Parceiro(models.Model):
-    nome_parceiro = models.CharField(max_length=100, primary_key=True)
+    nome = models.CharField(max_length=100, primary_key=True)
     tipo = models.CharField(max_length=100)
     disponibilidade = models.CharField(max_length=100)
     email = models.EmailField()
     foto = models.ImageField()
 
     def __str__(self):
-        return f"{self.nome_parceiro}"
+        return self.nome_parceiro
 
 class Evento(models.Model):
     nome = models.CharField(max_length=100, primary_key=True)
@@ -66,17 +72,17 @@ class Evento(models.Model):
     foto = models.ImageField()
     descricao = models.TextField()
     local = models.CharField(max_length=100)
-    grupo = models.ManyToManyField("Grupo", on_delete=models.CASCADE, related_name="user_group", blank=True, null=True, default=None)
-    area = models.ForeignKey("Area", on_delete=models.CASCADE, related_name="user_area", default=None, blank=True, null=True)
-    participantes = models.ManyToManyField("User", on_delete=models.CASCADE, related_name="evento_participantes", blank=True, null=True, default=None)
+    grupo = models.ManyToManyField(Grupo, related_name="eventos", blank=True)
+    area = models.ForeignKey(Area, on_delete=models.CASCADE, related_name="eventos", blank=True, null=True)
+    participantes = models.ManyToManyField(User, related_name="eventos", blank=True)
 
     def __str__(self):
-        return f"{self.nome}"
-    
-class RedesSociais(models.Model):
-    usuario = models.ForeignKey("User", on_delete=models.CASCADE, related_name="user_social_media")
+        return self.nome
+
+class Redes(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name="redes_sociais")
     link = models.URLField()
     nome = models.CharField(max_length=100)
 
     def __str__(self):
-        return f"{usuario}: {self.nome}"
+        return f"{self.usuario}: {self.nome}"
