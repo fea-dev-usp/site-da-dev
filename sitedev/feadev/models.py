@@ -73,3 +73,10 @@ class Evento(models.Model):
     def __str__(self):
         return f"{self.nome}"
     
+class RedesSociais(models.Model):
+    usuario = models.ForeignKey("User", on_delete=models.CASCADE, related_name="user_social_media")
+    link = models.URLField()
+    nome = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{usuario}: {self.nome}"
