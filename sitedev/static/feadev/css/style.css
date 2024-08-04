@@ -7,6 +7,10 @@ Description: The Template is created for web template
 Tags: html5, css3, sass, gulp, bootstrap grid
 Version: 2.0.0
 */
+
+/* --main_color: #1d1d1d;
+    --side_color1: #f8e608;
+    --side_color2: #c5b929; */
 :root {
     --font-family: "Source Sans Pro";
     --font-size: 16px;
