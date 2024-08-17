@@ -391,6 +391,74 @@ blockquote footer {
     padding-top: 0.8em;
 }
 
+.image_side_section {
+    background-color: var(--background-color);
+}
+  
+.image_side_section .heading_container {
+    margin-bottom: 45px;
+}
+
+.image_side_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.image_side_section .img-box img {
+    max-width: 100%;
+}
+
+.image_side_section .detail-box h3 {
+    font-weight: bold;
+}
+
+.image_side_section .detail-box p {
+    margin-top: 15px;
+}
+
+.image_side_section .detail-box a {
+    display: inline-block;
+    padding: 10px 45px;
+    margin-top: 15px;
+}
+
+.heading_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.heading_container h2 {
+    margin-top: 25px;
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.heading_container h2 span {
+  color: var(--alert-warning);
+}
+
+.heading_container p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.heading_container.heading_center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
 .content h2, .content h3, .content h4, .content h5, .content h6,
 .entry-content h2,
 .entry-content h3,
