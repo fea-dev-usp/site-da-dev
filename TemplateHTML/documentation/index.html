@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+  <title>HTML Templates Documentation</title>
+  <meta name="description" content="Description">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".docs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+    <!-- Header
+  ============================ -->
+    <header id="header" class="sticky-top">
+      <!-- Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+        <div class="container-fluid">
+          <!-- Sidebar Toggler -->
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span></span></button>
+
+          <!-- Logo -->
+          <a class="logo ml-md-3" href="index.html" title="PathSoft Template"> <img src="assets/images/logo.svg" alt="PathSoft Template" /> </a>
+          <!--<span class="text-2 ml-2">v1.5</span>-->
+          <!-- End logo -->
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content
+  ============================ -->
+    <div id="content" role="main">
+
+      <!-- Sidebar Navigation
+	============================ -->
+      <div class="docs-navigation bg-light">
+        <ul class="nav flex-column ">
+          <li class="nav-item"><a class="nav-link active" href="#docs_start">Getting Started</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#docs_html_structure">HTML Structure</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#docs_template_customization">Template customization</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#docs_change_logo">Change logo</a></li>
+              <li class="nav-item"><a class="nav-link" href="#docs_color_scheme_and_typography">Color scheme & typography</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#docs_content">Content</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#docs_typography">Typography</a></li>
+              <li class="nav-item"><a class="nav-link" href="#docs_code">Code</a></li>
+              <li class="nav-item"><a class="nav-link" href="#docs_table">Table</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#docs_components">Components</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#docs_accordion">Accordion</a></li>
+              <li class="nav-item"><a class="nav-link" href="#docs_tabs">Tabs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#docs_icons">Icons</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#docs_source_credits">Source & Credits</a></li>
+        </ul>
+      </div>
+
+      <!-- Docs Content
+	============================ -->
+      <div class="docs-content">
+        <div class="container">
+
+          <!-- Getting Started
+		============================ -->
+          <section id="docs_start">
+            <h1>HTML Templates Documentation</h1>
+            <p class="lead">Thank you so much for purchasing our item from TemplateMonster.</p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- HTML Structure
+		============================ -->
+          <section id="docs_html_structure">
+            <h2>HTML Structure</h2>
+            <p>HTML Website Template .html pages structure is built on the following principle:</p>
+            <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+
+&lt;!-- Your Title, Description, Stylesheets --&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;main class=&quot;main&quot;&gt; 
+
+    &lt;div class=&quot;main-inner&quot;&gt;
+
+      &lt;!-- Begin mobile main menu --&gt;
+      &lt;div class=&quot;mob-main-mnu&quot;&gt;
+        ......
+      &lt;/div&gt;&lt;!-- End mobile main menu --&gt; 
+      
+      &lt;!-- Begin header --&gt;
+      &lt;header class=&quot;header&quot;&gt;
+        ......
+      &lt;/header&gt;&lt;!-- End header --&gt; 
+      
+      &lt;!-- Begin section --&gt;
+      &lt;div class=&quot;section&quot;&gt;
+        ......
+      &lt;/div&gt;&lt;!-- section --&gt; 
+
+    &lt;/div&gt;
+
+    &lt;!-- Begin footer --&gt;
+    &lt;footer class=&quot;footer&quot;&gt;
+      ......
+    &lt;/footer&gt;&lt;!-- End footer --&gt; 
+    
+  &lt;/main&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Template customization
+		============================ -->
+          <section id="docs_template_customization">
+            <h2>Template customization</h2>
+          </section>
+          <br>
+
+          <!-- Change logo
+          ============================ -->
+          <section id="docs_change_logo">
+            <h2>Change logo</h2>
+            <p>The Logo Container can be found in the Header Container - <code>&lt;header&gt;</code></p>
+<pre><code class="html">&lt;!-- Begin logo --&gt; 
+&lt;a class=&quot;logo&quot; href=&quot;/&quot; title=&quot;PathSoft&quot;&gt;
+  &lt;img src=&quot;assets/img/logo.svg&quot; width=&quot;115&quot; height=&quot;36&quot; alt=&quot;psFree&quot;/&gt;
+&lt;/a&gt;&lt;!-- End logo --&gt;
+</code></pre>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Color scheme and typography
+          ============================ -->
+          <section id="docs_color_scheme_and_typography">
+            <h2>Configuring the color scheme and typography</h2>
+            <p>Full color and typography control.</p>
+<pre><code class="css">
+:root {
+  --font-family: "Source Sans Pro";
+  --font-size: 16px;
+  --font-weight: 400;
+  --font-style: normal;
+  --line-height: 1.625;
+  --heading-font-family: "Montserrat";
+  --heading-font-size: 2.5rem;
+  --heading-line-height: 1.3;
+  --heading-font-weight: 700;
+  --accent-color: #186ADC;
+  --el-gradient-start: #1859B4;
+  --el-gradient-end: #0467F1;
+  --background-color: #ffffff;
+  --background-secondary-color: #F0F4F8;
+  --text-primary: #303036;
+  --text-secondary: #63636b;
+  --border-color: #D4D4E1;
+  --placeholder-color: #6F6F76;
+  --error-color: #ff3d0d;
+  --el-border-radius: 10px;
+  --el-border-radius-min: 6px;
+  --el-box-shadow: 2px 4px 20px 1px rgba(45, 45, 45, 0.13);
+  --header-box-shadow: 0px 0px 14px 0px rgba(77, 82, 94, 0.15);
+}
+</code></pre>
+          </section>
+
+          <hr class="divider">
+
+
+          <!-- Content
+		============================ -->
+          <section id="docs_content">
+            <h2>Content</h2>
+            <p>Documentation and examples for displaying typography, code, table and
+              more..</p>
+          </section>
+
+          <!-- Typography
+		============================ -->
+          <section id="docs_typography">
+            <h2>Typography</h2>
+            <p class="text-4">Documentation and examples for typography, headings, body text, lists, and more.</p>
+            <h3>Headings</h3>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Heading</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&lt;h1&gt;&lt;/h1&gt;</code></td>
+                  <td>
+                    <h1>H1 Heading</h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h2&gt;&lt;/h2&gt;</code></td>
+                  <td>
+                    <h2>H2 Heading</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h3&gt;&lt;/h3&gt;</code></td>
+                  <td>
+                    <h3>H3 Heading</h3>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h4&gt;&lt;/h4&gt;</code></td>
+                  <td>
+                    <h4>H4 Heading</h4>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h5&gt;&lt;/h5&gt;</code></td>
+                  <td>
+                    <h5>H5 Heading</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>&lt;h6&gt;&lt;/h6&gt;</code></td>
+                  <td>
+                    <h6>H6 Heading</h6>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 class="mt-5">Inline Text elements</h3>
+            <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+            <p><del>This line of text is meant to be treated as deleted text.</del></p>
+            <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+            <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+            <p><u>This line of text will render as underlined</u></p>
+            <p><small>This line of text is meant to be treated as fine print.</small></p>
+            <p><strong>This line rendered as bold text.</strong></p>
+            <p><em>This line rendered as italicized text.</em></p>
+
+            <pre><code class="html">&lt;p&gt;You can use the mark tag to &lt;mark&gt;highlight&lt;/mark&gt; text.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;This line of text is meant to be treated as deleted text.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;This line of text is meant to be treated as no longer accurate.&lt;/s&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ins&gt;This line of text is meant to be treated as an addition to the document.&lt;/ins&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;This line of text will render as underlined&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This line rendered as bold text.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This line rendered as italicized text.&lt;/em&gt;&lt;/p&gt;
+</code></pre>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Code
+		============================ -->
+          <section id="docs_code">
+            <h2>Code</h2>
+            <p>Documentation and examples for displaying inline and multiline blocks of code</p>
+
+            <h3 class="mt-5">Inline code</h3>
+            <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>. <span class="text-info">Be sure to escape
+                HTML angle brackets</span>.</p>
+
+            <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+            <pre><code class="html">For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped as inline.</code></pre>
+
+          <hr class="divider">
+
+          <!-- Table
+		============================ -->
+          <section id="docs_table">
+            <h2>Table</h2>
+            <p>Documentation and examples for opt-in styling of tables.</p>
+
+            <h3 class="mt-5">Default</h3>
+            <pre><code class="html">&lt;table&gt;
+   .......
+&lt;/table&gt;</code></pre>
+
+            <h3 class="mt-5">Secondary</h3>
+            <pre><code class="html">&lt;table class=&quot;table-secondary&quot;&gt;
+   .......
+&lt;/table&gt;</code></pre>
+
+            <h3 class="mt-5">Bordered</h3>
+            <pre><code class="html">&lt;table class=&quot;table-bordered&quot;&gt;
+   .......
+&lt;/table&gt;</code></pre>
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- Components
+		============================ -->
+          <section id="docs_components">
+            <h2>Components</h2>
+            <p class="mb-5">Setting up components is very easy.</p>
+          </section>
+
+          <!-- Accordion
+		  ============================ -->
+          <section id="docs_accordion">
+            <h2>Accordion</h2>
+            <p>You can extend the default collapse behavior to create an accordion. To properly achieve the accordion
+              style, be sure to use <code>.accordion</code> as a wrapper.</p>
+            <pre><code class="html">&lt;div class=&quot;accordion&quot;&gt;
+  &lt;ul class=&quot;accordion-list&quot;&gt;
+    &lt;li class=&quot;accordion-item section-bgc&quot;&gt;
+      &lt;div class=&quot;accordion-trigger&quot;&gt;
+        Accordion Title
+      &lt;/div&gt;
+      &lt;div class=&quot;accordion-content content&quot;&gt;
+        &lt;p&gt;This is Accordion Content&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion-item section-bgc&quot;&gt;
+      &lt;div class=&quot;accordion-trigger&quot;&gt;
+        Accordion Title
+      &lt;/div&gt;
+      &lt;div class=&quot;accordion-content content&quot;&gt;
+        &lt;p&gt;This is Accordion Content&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion-item section-bgc&quot;&gt;
+      &lt;div class=&quot;accordion-trigger&quot;&gt;
+        Accordion Title
+      &lt;/div&gt;
+      &lt;div class=&quot;accordion-content content&quot;&gt;
+        &lt;p&gt;This is Accordion Content&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Tabs
+		  ============================ -->
+          <section id="docs_tabs">
+            <h2>Tabs</h2>
+            <p>Default component combined with Docs for unique tabs.</p>
+
+            <pre><code class="html">&lt;div class=&quot;tabs&quot;&gt;
+  &lt;ul class=&quot;tabs-nav&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;Home&lt;/li&gt;
+    &lt;li&gt;Profile&lt;/li&gt;
+    &lt;li&gt;Contact&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;tabs-container&quot;&gt;
+    &lt;div class=&quot;tabs-item content active&quot;&gt;This is Tab Content Home&lt;/div&gt;
+    &lt;div class=&quot;tabs-item content&quot;&gt;This is Tab Content Profile&lt;/div&gt;
+    &lt;div class=&quot;tabs-item content&quot;&gt;This is Tab Content Contact&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <h4>Options:</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Type Class</th>
+                    <th>Features</th>
+                    <th>Code Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>.tabs-vertical</code></td>
+                    <td>Vertical Tab</td>
+                    <td>
+                      <pre class="mb-0"><code>&lt;div class=&quot;tabs tabs-vertical&quot;&gt;
+  .......
+&lt;/div&gt;</code></pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Icons
+          ============================ -->
+          <section id="docs_icons">
+            <h2>Icons</h2>
+            <p><strong>Material Icons</strong> icon sets are used.</p>
+            <pre><code class="html">&lt;i class=&quot;material-icons md-24&quot;&gt;chat&lt;/i&gt;
+&lt;i class=&quot;material-icons material-icons-outlined md-24&quot;&gt;chat&lt;/i&gt;</code></pre>
+            <p>Available icon sizes: <code>md-18</code>, <code>md-20</code>, <code>md-22</code>, <code>md-24</code>, <code>md-26</code>, <code>md-28</code>, <code>md-32</code>, <code>md-40</code>, <code>md-48</code>, <code>md-60</code>, <code>md-72</code></p>
+            <p><span class="badge badge-danger text-uppercase mr-2">Note</span>Please go to their official documentation
+              pages for a full list of icons: <a target="_blank" href="https://fonts.google.com/icons">Material Icons</a></p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Source & Credits
+		============================ -->
+          <section id="docs_source_credits">
+            <h2>Source & Credits</h2>
+            <h4>Images:</h4>
+            <ul>
+              <li>Unsplash - <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a></li>
+              <li>Pixabay - <a href="https://pixabay.com/" target="_blank">https://pixabay.com/</a></li>
+              <li>Pexels - <a href="https://pexels.com/" target="_blank">https://www.pexels.com/</a></li>
+            </ul>
+            <h4>Fonts:</h4>
+            <ul>
+              <li>Google Fonts - <a target="_blank" href="https://fonts.google.com/">https://fonts.google.com/</a></li>
+              <li>Material Icons - <a target="_blank" href="https://fonts.google.com/">https://fonts.google.com/icons/</a></li>
+            </ul>
+            <h4>Scripts:</h4>
+            <ul>
+              <li>JQuery - <a href="http://jquery.com/" target="_blank">http://jquery.com/</a></li>
+              <li>lazy Loading - <a href="https://github.com/eisbehr-/jquery.lazy" target="_blank">https://apoorv.pro/lozad.js/</a></li>
+              <li>Spincrement - <a href="https://github.com/johnjcamilleri/jquery-spincrement" target="_blank">https://github.com/johnjcamilleri/jquery-spincrement</a></li>
+              <li>PristineJS - <a href="https://pristine.js.org/" target="_blank">https://pristine.js.org/</a></li>
+          </ul>
+          </section>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- Content end -->
+
+    <!-- Footer
+  ============================ -->
+    <!--<footer id="footer" class="section bg-dark footer-text-light">
+      //
+    </footer>-->
+    <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
