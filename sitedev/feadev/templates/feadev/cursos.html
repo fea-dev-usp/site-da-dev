@@ -1,0 +1,68 @@
+{% extends "feadev/layout.html" %}
+{% load static %}
+
+{% block content %}
+
+			<!-- Begin bread crumbs -->
+			<nav class="bread-crumbs">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs-list">
+								<li>
+									<a href="{% url 'index' %}">Home</a>
+									<i class="material-icons md-18">chevron_right</i>
+								</li>
+								<li>Cursos</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav><!-- End bread crumbs -->
+
+			<div class="section">
+				<div class="container">
+					<div class="row items">
+						<header class="col-12">
+							<div class="section-heading heading-center">
+								<div class="section-subheading">Areas what we serv</div>
+								<h1>Nossos Cursos</h1>
+							</div>
+						</header>
+						<div class="col-12 item">
+							<div class="row items">
+								<div class="col-md-6 col-xl-4 col-12 item">
+									<a href="single-service.html" class="iitem item-style iitem-hover">
+										<div class="iitem-icon">
+											<i class="material-icons material-icons-outlined md-48">corporate_fare</i>
+										</div>
+										<div class="iitem-icon-bg">
+											<i class="material-icons material-icons-outlined">corporate_fare</i>
+										</div>
+										<h2 class="iitem-heading item-heading-large">Curso de Python</h2>
+										<div class="iitem-desc">Feito anualmente, o Curso de Python da FEA.dev tem como objetivo ensinar as bases da programação até o nível intermediário, com aulas expositivas, listas de exercícios e muito mais!</div>
+                                        <div class="iitem-desc"><img src="" alt="">
+                                        -Colocar fotos do curso presencial-</div>
+                                        <div class="iitem-desc">Para se inscrever, basta acessar: -link-</div>
+									</a>
+								</div>
+								<div class="col-md-6 col-xl-4 col-12 item">
+									<a href="single-service.html" class="iitem item-style iitem-hover">
+										<div class="iitem-icon">
+											<i class="material-icons material-icons-outlined md-48">tv</i>
+										</div>
+										<div class="iitem-icon-bg">
+											<i class="material-icons material-icons-outlined">tv</i>
+										</div>
+										<h2 class="iitem-heading item-heading-large">Curso de Excel</h2>
+										<div class="iitem-desc">Em desenvolvimento...</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+{% endblock content %}

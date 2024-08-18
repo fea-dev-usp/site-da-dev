@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
         
-    <link rel="icon" href="{% static 'feadev/img/favicon/favicon.ico' %}" type="image/x-icon"> 
+    <link rel="icon" href="{% static 'feadev/img/favicon/simbolo.ico' %}" type="image/x-icon" sizes="16x16"> 
 
     <link rel="stylesheet" href="{% static 'feadev/css/bootstrap-grid.css' %}">
 	<link rel="stylesheet" href="{% static 'feadev/css/style.css' %}">
@@ -24,6 +24,7 @@
 
 	<link rel="preload" href="{% static 'feadev/fonts/material-icons/material-icons.woff2' %}" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="{% static 'feadev/fonts/material-icons/material-icons-outlined.woff2' %}" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
 </head>
 
@@ -38,25 +39,28 @@
 				<div class="mmm-content">
 					<ul class="mmm-list">
 						<li>
-							<a href="index.html">Home</a>
+							<a href="{% url 'index' %}">Home</a>
 						</li>
 						<li>
-							<a href="about-us.html">About us</a>
+							<a href="{% url 'sobre' %}">Sobre Nós</a>
 						</li>
 						<li>
-							<a href="services.html">Services</a>
+							<a href="{% url 'projetos' %}">Projetos</a>
 						</li>
 						<li>
-							<a href="typography.html">Projetos</a>
+							<a href="{% url 'eventos' %}">Eventos</a>
 						</li>
 						<li>
-							<a href="tabs-and-accordions.html">Tabs & Accordions</a>
+							<a href="{% url 'grupos' %}">Grupos de Estudo</a>
 						</li>
 						<li>
-							<a href="news.html">News</a>
+							<a href="{% url 'cursos' %}">Cursos</a>
 						</li>
 						<li>
-							<a href="contacts.html">Contacts</a>
+							<a href="{% url 'processo_seletivo' %}">Processo Seletivo</a>
+						</li>
+						<li>
+							<a href="{% url 'contato' %}">Contato</a>
 						</li>
 					</ul>
 				</div>
@@ -66,8 +70,8 @@
 				<div class="container">
 					<div class="row flex-nowrap align-items-center justify-content-between">
 						<div class="col-auto header-fixed-col logo-wrapper">
-							<a href="index.html" class="logo" title="PathSoft">
-								<img src="assets/img/logo.svg" width="115" height="36" alt="PathSoft">
+							<a href="{% url 'index' %}" class="logo" title="FEA.dev">
+								<img src="{% static "feadev/img/logo-dev-nav.png" %}" width="115" height="36" alt="FEA.dev">
 							</a>
 						</div>
 						<div class="col-auto col-xl col-static header-fixed-col d-none d-xl-block">
@@ -77,38 +81,39 @@
 									<nav class="main-mnu">
 										<ul class="main-mnu-list">
 											<li>
-												<a href="index.html" data-title="Home">
+												<a href="{% url 'index' %}" data-title="Home">
 													<span>Home</span>
 												</a>
 											</li>
 											<li>
-												<a href="about-us.html" data-title="About us">
-													<span>About us</span>
+												<a href="{% url 'sobre' %}" data-title="Sobre Nós">
+													<span>Sobre Nós</span>
 												</a>
 											</li>
 											<li>
-												<a href="services.html" data-title="Services">
-													<span>Services</span>
+												<a href="#" data-bs-toggle="dropdown" aria-expanded="false" data-title='Atividades'>
+													<span>Atividades</span>
+												</a>
+												<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style='background-color: var(--background-color);'>
+													<li><a class="dropdown-item" href="{% url 'projetos' %}">Projetos</a></li>
+													<li><a class="dropdown-item" href="{% url 'eventos' %}">Eventos</a></li>
+													<li><hr class="dropdown-divider" style="background-color: var(--text-primary);"></li>
+													<li><a class="dropdown-item" href="{% url 'grupos' %}">Grupos de Estudo</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="{% url 'cursos' %}" data-title="Cursos">
+													<span>Cursos</span>
 												</a>
 											</li>
 											<li>
-												<a href="typography.html" data-title="Projetos">
-													<span>Projetos</span>
+												<a href="{% url 'processo_seletivo' %}" data-title="Processo Seletivo">
+													<span>Processo Seletivo</span>
 												</a>
 											</li>
 											<li>
-												<a href="tabs-and-accordions.html" data-title="Tabs & Accordions">
-													<span>Tabs & Accordions</span>
-												</a>
-											</li>
-											<li>
-												<a href="news.html" data-title="News">
-													<span>News</span>
-												</a>
-											</li>
-											<li>
-												<a href="contacts.html" data-title="Contacts">
-													<span>Contacts</span>
+												<a href="{% url 'contato' %}" data-title="Contato">
+													<span>Contato</span>
 												</a>
 											</li>
 										</ul>
@@ -151,11 +156,11 @@
                             <div class="footer-item">
                                 <nav class="footer-nav">
                                     <ul class="footer-mnu footer-mnu-line">
-                                        <li><a href="#!" class="hover-link" data-title="Home"><span>Home</span></a></li>
-                                        <li><a href="#!" class="hover-link" data-title="About us"><span>About us</span></a></li>
-                                        <li><a href="#!" class="hover-link" data-title="Services"><span>Services</span></a></li>
-                                        <li><a href="#!" class="hover-link" data-title="News"><span>News</span></a></li>
-                                        <li><a href="#!" class="hover-link" data-title="Contacts"><span>Contacts</span></a></li>
+                                        <li><a href="{% url 'index' %}" class="hover-link" data-title="Home"><span>Home</span></a></li>
+                                        <li><a href="{% url 'sobre' %}" class="hover-link" data-title="Sobre Nós"><span>Sobre Nós</span></a></li>
+                                        <li><a href="{% url 'cursos' %}" class="hover-link" data-title="Cursos"><span>Cursos</span></a></li>
+                                        <li><a href="{% url 'processo_seletivo' %}" class="hover-link" data-title="Proceso Seletivo"><span>Processo Seletivo</span></a></li>
+                                        <li><a href="{% url 'contato' %}" class="hover-link" data-title="Contato"><span>Contato</span></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -191,5 +196,6 @@
 	<script src="{% static 'feadev/libs/pristine/pristine.min.js' %}"></script>
 	<script src="{% static 'feadev/js/custom.js' %}"></script>
 	<script src="{% static 'feadev/js/forms.js' %}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	
 </body></html>

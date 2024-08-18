@@ -1,0 +1,278 @@
+{% extends "feadev/layout.html" %}
+{% load static %}
+
+{% block content %}
+			<!-- Begin bread crumbs -->
+			<nav class="bread-crumbs">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs-list">
+								<li>
+									<a href="{% url 'index' %}">Home</a>
+									<i class="material-icons md-18">chevron_right</i>
+								</li>
+								<li>
+									<a href="{% url 'index' %}">Atividades</a>
+									<i class="material-icons md-18">chevron_right</i>
+								</li>
+								<li>Gupos de Estudo</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav><!-- End bread crumbs -->
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-heading heading-center">
+								<h1>Typography</h1>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="content">
+								<h1>H1 Heading</h1>
+								<h2>H2 Heading</h2>
+								<h3>H3 Heading</h3>
+								<h4>H4 Heading</h4>
+								<h5>H5 Heading</h5>
+								<h6>H6 Heading</h6>
+								<p>Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find
+									exactly what he/she is looking for. With advanced features of activating account and new login widgets,
+									you will definitely have a great experience of using our web page.</p>
+								<h3>HTML Text Elements</h3>
+								<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+								<p><del>This line of text is meant to be treated as deleted text.</del></p>
+								<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+								<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+								<p><u>This line of text will render as underlined</u></p>
+								<p><small>This line of text is meant to be treated as fine print.</small></p>
+								<p><strong>This line rendered as bold text.</strong></p>
+								<p><em>This line rendered as italicized text.</em></p>
+								<p>This line width <a href="#!">Link</a></p>
+								<br>
+								<h4>Blockquote</h4>
+								<blockquote>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum
+										dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit
+										amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit. Integer posuere erat a ante.</p>
+									<footer>Oleh Koval</footer>
+								</blockquote>
+								<br>
+								<h4>Ordered & Unordered Lists</h4>
+								<ul>
+									<li><strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit.</li>
+									<li>Perspiciatis deleniti deserunt tempora</li>
+									<li>Lorem ipsum dolor sit amet</li>
+									<li>PathSoft offers a high caliber of resources skilled in Microsoft Azure.NET, mobile and Quality
+										Assurance. They became our true business partners over the past three years.</li>
+									<li>Ethics</li>
+								</ul>
+								<ol>
+									<li><strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit.</li>
+									<li>Perspiciatis deleniti deserunt tempora</li>
+									<li>Lorem ipsum dolor sit amet</li>
+									<li>PathSoft offers a high caliber of resources skilled in Microsoft Azure.NET, mobile and Quality
+										Assurance. They became our true business partners over the past three years.</li>
+									<li>Ethics</li>
+								</ol>
+								<table>
+									<thead>
+										<tr>
+											<th>Consulting</th>
+											<th>Service</th>
+											<th>Innovation</th>
+											<th>Management</th>
+											<th>Ethics</th>
+											<th>Verified </th>
+											<th>Ethics</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Consulting</td>
+											<td>1.12</td>
+											<td>4.35</td>
+											<td>1.43</td>
+											<td>2.32</td>
+											<td>5.32</td>
+											<td>2.11</td>
+										</tr>
+										<tr>
+											<td>Customer Service</td>
+											<td>1.44</td>
+											<td>1.66</td>
+											<td>1.43</td>
+											<td>2.33</td>
+											<td>5.32</td>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>Innovation</td>
+											<td>4.12</td>
+											<td>1.22</td>
+											<td>4.55</td>
+											<td>2.33</td>
+											<td>5.28</td>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>Customer Service</td>
+											<td>1.44</td>
+											<td>1.66</td>
+											<td>1.43</td>
+											<td>2.33</td>
+											<td>5.32</td>
+											<td>3</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>All Items</td>
+											<td>22</td>
+											<td>13</td>
+											<td>14</td>
+											<td>9</td>
+											<td>17</td>
+											<td>11</td>
+										</tr>
+									</tfoot>
+								</table>
+								<br>
+								<table class="table-secondary">
+									<thead>
+										<tr>
+											<th>Consulting</th>
+											<th>Service</th>
+											<th>Innovation</th>
+											<th>Management</th>
+											<th>Ethics</th>
+											<th>Verified </th>
+											<th>Ethics</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Consulting</td>
+											<td>1.12</td>
+											<td>4.35</td>
+											<td>1.43</td>
+											<td>2.32</td>
+											<td>5.32</td>
+											<td>2.11</td>
+										</tr>
+										<tr>
+											<td>Customer Service</td>
+											<td>1.44</td>
+											<td>1.66</td>
+											<td>1.43</td>
+											<td>2.33</td>
+											<td>5.32</td>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>Innovation</td>
+											<td>4.12</td>
+											<td>1.22</td>
+											<td>4.55</td>
+											<td>2.33</td>
+											<td>5.28</td>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>Customer Service</td>
+											<td>1.44</td>
+											<td>1.66</td>
+											<td>1.43</td>
+											<td>2.33</td>
+											<td>5.32</td>
+											<td>3</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>All Items</td>
+											<td>22</td>
+											<td>13</td>
+											<td>14</td>
+											<td>9</td>
+											<td>17</td>
+											<td>11</td>
+										</tr>
+									</tfoot>
+								</table>
+								<br>
+								<table class="table-bordered">
+									<thead>
+										<tr>
+											<th>Consulting</th>
+											<th>Service</th>
+											<th>Innovation</th>
+											<th>Management</th>
+											<th>Ethics</th>
+											<th>Verified </th>
+											<th>Ethics</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Consulting</td>
+											<td>1.12</td>
+											<td>4.35</td>
+											<td>1.43</td>
+											<td>2.32</td>
+											<td>5.32</td>
+											<td>2.11</td>
+										</tr>
+										<tr>
+											<td>Customer Service</td>
+											<td>1.44</td>
+											<td>1.66</td>
+											<td>1.43</td>
+											<td>2.33</td>
+											<td>5.32</td>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>Innovation</td>
+											<td>4.12</td>
+											<td>1.22</td>
+											<td>4.55</td>
+											<td>2.33</td>
+											<td>5.28</td>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>Customer Service</td>
+											<td>1.44</td>
+											<td>1.66</td>
+											<td>1.43</td>
+											<td>2.33</td>
+											<td>5.32</td>
+											<td>3</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>All Items</td>
+											<td>22</td>
+											<td>13</td>
+											<td>14</td>
+											<td>9</td>
+											<td>17</td>
+											<td>11</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+{% endblock content %}
