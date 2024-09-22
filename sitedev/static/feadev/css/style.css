@@ -1,6 +1,6 @@
-/*   
+/*
 Theme Name: psFree
-Theme URI: 
+Theme URI:
 Author: Koval Web
 Author URI: https://www.templatemonster.com/vendors/kovalweb
 Description: The Template is created for web template
@@ -153,7 +153,6 @@ body {
     margin: 0;
     padding: 0;
     opacity: 1;
-    background-color: var(--background-color);
 }
 
 body.overflow-hidden {
@@ -1816,7 +1815,7 @@ textarea {
 
 .intro-item {
     display: block;
-    min-height: 40rem;
+    min-height: 30rem;
     overflow: hidden;
 }
 
@@ -1846,7 +1845,6 @@ textarea {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .intro-item .section-subheading {
@@ -1892,14 +1890,6 @@ textarea {
 }
 
 @media (max-width: 1199.98px) {
-    .intro-item {
-        min-height: 35rem;
-    }
-
-    .intro-item {
-        min-height: 35rem;
-    }
-
     .intro-item::after {
         content: "";
     }
@@ -1910,10 +1900,6 @@ textarea {
 
     .intro-item-type-1 .section-desc {
         color: rgba(255, 255, 255, 0.7);
-    }
-
-    .intro-item-type-1 .section-subheading {
-        color: rgba(255, 255, 255, 0.8);
     }
 
     .intro-item-type-1 .btn.btn-border {
@@ -1960,7 +1946,6 @@ textarea {
 @media only screen and (min-width: 567px) and (max-width: 900px) and (orientation: landscape) {
     .intro-item {
         height: auto;
-        min-height: 25rem;
     }
 
     .intro-content {
@@ -3495,7 +3480,7 @@ body.mmm-open .mmm {
     background-color: var(--background-color);
     color: var(--text-primary);
 }
-  
+
 .image_side_section .heading_container {
     margin-bottom: 45px;
 }
