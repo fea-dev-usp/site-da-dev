@@ -3187,9 +3187,9 @@ body.mmm-open .mmm {
 /* 6.3 Footer */
 .footer {
     position: relative;
-    background-color: var(--text-primary);
+    background-color: var(--background-color);
     width: 100%;
-    color: var(--background-color);
+    color: var(--text-primary);
     font-size: 1rem;
 }
 
@@ -3552,3 +3552,19 @@ body.mmm-open .mmm {
           align-items: center;
   text-align: center;
 }
+
+
+/* ---------------------------------------- */
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 0;
+    margin: 0;
+  }
+  .social-icons svg {
+    width: 1.2em;
+    height: 1.1em;
+    fill: #ffef02;
+  }
