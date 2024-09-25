@@ -138,6 +138,7 @@ html {
 
 html, body {
     min-height: 100%;
+    background: var(--background-color);
 }
 
 body {
