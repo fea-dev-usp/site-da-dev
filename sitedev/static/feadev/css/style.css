@@ -1899,7 +1899,7 @@ textarea {
     }
 
     .intro-item-type-1 .section-desc {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.9);
     }
 
     .intro-item-type-1 .btn.btn-border {
@@ -2008,7 +2008,6 @@ textarea {
     border-radius: 50%;
     overflow: hidden;
     background-color: var(--accent-color);
-    background: linear-gradient(to right, var(--el-gradient-start) 0%, var(--el-gradient-end) 100%);
     margin: 0 auto 1.25rem;
     color: var(--background-color);
     fill: var(--background-color);
