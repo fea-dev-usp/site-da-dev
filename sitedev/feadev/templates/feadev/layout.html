@@ -1,222 +1,248 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
-  <head>
-
-    <meta charset="utf-8">
-
-    <title>FEA.dev</title>
-
-    <meta name="description" content="Description">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-
-    <link rel="icon" href="{% static 'feadev/img/favicon/simbolo.ico' %}" type="image/x-icon" sizes="16x16">
-
-    <link rel="stylesheet" href="{% static 'feadev/css/bootstrap-grid.css' %}">
-	  <link rel="stylesheet" href="{% static 'feadev/css/style.css' %}">
-    <link rel="preload" href="{% static 'feadev/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff2' %}" as="font" type="font/woff2" crossorigin>
-	  <link rel="preload" href="{% static 'feadev/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff2' %}" as="font" type="font/woff2" crossorigin>
-	  <link rel="preload" href="{% static 'feadev/fonts/montserrat-v25-latin/montserrat-v25-latin-700.woff2' %}" as="font" type="font/woff2" crossorigin>
-	  <link rel="preload" href="{% static 'feadev/fonts/montserrat-v25-latin/montserrat-v25-latin-600.woff2' %}" as="font" type="font/woff2" crossorigin>
-
-	  <link rel="preload" href="{% static 'feadev/fonts/material-icons/material-icons.woff2' %}" as="font" type="font/woff2" crossorigin>
-	  <link rel="preload" href="{% static 'feadev/fonts/material-icons/material-icons-outlined.woff2' %}" as="font" type="font/woff2" crossorigin>
-	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-
-  </head>
-
-  <body>
-
-	  <main class="main">
-
-		  <div class="main-inner">
-
-			  <!-- Begin mobile main menu -->
-			  <nav class="mmm">
-				  <div class="mmm-content">
-					  <ul class="mmm-list">
-						  <li>
-							  <a href="{% url 'index' %}">Home</a>
-						  </li>
-						  <li>
-							  <a href="{% url 'sobre' %}">Sobre Nós</a>
-						  </li>
-						  <li>
-							  <a href="{% url 'projetos' %}">Projetos</a>
-						  </li>
-						  <li>
-							  <a href="{% url 'eventos' %}">Eventos</a>
-						  </li>
-						  <li>
-							  <a href="{% url 'grupos' %}">Grupos de Estudo</a>
-						  </li>
-						  <li>
-							  <a href="{% url 'cursos' %}">Cursos</a>
-						  </li>
-						  <li>
-							  <a href="{% url 'processo_seletivo' %}">Processo Seletivo</a>
-						  </li>
-						  <li>
-							  <a href="{% url 'contato' %}">Contato</a>
-						  </li>
-					  </ul>
-				  </div>
-			  </nav><!-- End mobile main menu -->
-		    <header class="header header-minimal">
-			    <nav class="header-fixed">
-				    <div class="container">
-					    <div class="row flex-nowrap align-items-center justify-content-between">
-						    <div class="col-auto header-fixed-col logo-wrapper">
-							    <a href="{% url 'index' %}" class="logo" title="FEA.dev">
-								    <img src="{% static "feadev/img/logo-dev-nav.png" %}" width="115" height="36" alt="FEA.dev">
-							    </a>
-						    </div>
-						    <div class="col-auto col-xl col-static header-fixed-col d-none d-xl-block">
-							    <div class="row flex-nowrap align-items-center justify-content-end">
-								    <div class="col header-fixed-col d-none d-xl-block col-static">
-								      <!-- Begin main menu -->
-									    <nav class="main-mnu">
-										    <ul class="main-mnu-list">
-											    <li>
-												    <a href="{% url 'index' %}" data-title="Home">
-													    <span>Home</span>
-												    </a>
-											    </li>
-											    <li>
-												    <a href="{% url 'sobre' %}" data-title="Sobre Nós">
-													    <span>Sobre Nós</span>
-												    </a>
-											    </li>
-											    <li>
-												    <a href="#" data-bs-toggle="dropdown" aria-expanded="false" data-title='Atividades'>
-													    <span>Atividades</span>
-												    </a>
-												    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style='background-color: var(--background-color);'>
-													    <li><a class="dropdown-item" href="{% url 'projetos' %}">Projetos</a></li>
-													    <li><a class="dropdown-item" href="{% url 'eventos' %}">Eventos</a></li>
-													    <li><hr class="dropdown-divider" style="background-color: var(--text-primary);"></li>
-													    <li><a class="dropdown-item" href="{% url 'grupos' %}">Grupos de Estudo</a></li>
-												    </ul>
-											    </li>
-											    <li>
-												    <a href="{% url 'cursos' %}" data-title="Cursos">
-													    <span>Cursos</span>
-												    </a>
-											    </li>
-											    <li>
-												    <a href="{% url 'processo_seletivo' %}" data-title="Processo Seletivo">
-													    <span>Processo Seletivo</span>
-												    </a>
-											    </li>
-											    <li>
-												    <a href="{% url 'contato' %}" data-title="Contato">
-													    <span>Contato</span>
-												    </a>
-											    </li>
-										    </ul>
-									    </nav><!-- End main menu -->
-								    </div>
-							    </div>
-						    </div>
-						    <div class="col-auto d-block d-xl-none header-fixed-col">
-							    <div class="main-mnu-btn">
-								    <span class="bar bar-1"></span>
-								    <span class="bar bar-2"></span>
-								    <span class="bar bar-3"></span>
-								    <span class="bar bar-4"></span>
-							    </div>
-						    </div>
-					    </div>
-				    </div>
-			    </nav>
-	      </header>
-
-        <!-- Begin content -->
-        {% block content %}
-        {% endblock %}
-
-        <!-- Begin footer -->
-        <footer class="footer footer-minimal">
-          <div class="footer-main">
-            <div class="container">
-              <div class="row items align-items-center">
-                <div class="col-lg-3 col-md-4 col-12 item">
-                  <div class="widget-brand-info">
-                    <div class="widget-brand-info-main">
-                      <a href="index.html" class="logo" title="PathSoft">
-                        <img src="{% static "feadev/img/logo-dev-nav.png" %}" class="lazy" width="133" height="36" alt="FEA.dev" data-loaded="true" style="opacity: 1;">
-                      </a>
+    <head>
+        <meta charset="utf-8">
+        <title>FEA.dev</title>
+        <meta name="description" content="Description">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=2">
+        <link rel="icon"
+              href="{% static 'feadev/img/favicon/simbolo.ico' %}"
+              type="image/x-icon"
+              sizes="16x16">
+        <link rel="stylesheet" href="{% static 'feadev/css/bootstrap-grid.css' %}">
+        <link rel="stylesheet" href="{% static 'feadev/css/style.css' %}">
+        <link rel="preload"
+              href="{% static 'feadev/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff2' %}"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="{% static 'feadev/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff2' %}"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="{% static 'feadev/fonts/montserrat-v25-latin/montserrat-v25-latin-700.woff2' %}"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="{% static 'feadev/fonts/montserrat-v25-latin/montserrat-v25-latin-600.woff2' %}"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="{% static 'feadev/fonts/material-icons/material-icons.woff2' %}"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="preload"
+              href="{% static 'feadev/fonts/material-icons/material-icons-outlined.woff2' %}"
+              as="font"
+              type="font/woff2"
+              crossorigin>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <main class="main">
+            <div class="main-inner">
+                <!-- Begin mobile main menu -->
+                <nav class="mmm">
+                    <div class="mmm-content">
+                        <ul class="mmm-list">
+                            <li>
+                                <a href="{% url 'index' %}">Home</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'sobre' %}">Sobre Nós</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'projetos' %}">Projetos</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'eventos' %}">Eventos</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'grupos' %}">Grupos de Estudo</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'cursos' %}">Cursos</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'processo_seletivo' %}">Processo Seletivo</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contato' %}">Contato</a>
+                            </li>
+                        </ul>
                     </div>
-                  </div>
-                </div>
-                <div class="col-md item">
-                  <div class="footer-item">
-                    <nav class="footer-nav">
-                      <ul class="footer-mnu footer-mnu-line">
-                        <div class="social-icons">
-                          <a href="www.instagram.com/fea.dev">
-                            <svg
-                                fill="currentColor"
-                                width="800px"
-                                height="800px"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                                ><path
-                                     d="m16 12v-.001c0-2.209-1.791-4-4-4s-4 1.791-4 4 1.791 4 4 4c1.104 0 2.104-.448 2.828-1.171.723-.701 1.172-1.682 1.172-2.768 0-.021 0-.042-.001-.063v.003zm2.16 0c-.012 3.379-2.754 6.114-6.135 6.114-3.388 0-6.135-2.747-6.135-6.135s2.747-6.135 6.135-6.135c1.694 0 3.228.687 4.338 1.797 1.109 1.08 1.798 2.587 1.798 4.256 0 .036 0 .073-.001.109v-.005zm1.687-6.406v.002c0 .795-.645 1.44-1.44 1.44s-1.44-.645-1.44-1.44.645-1.44 1.44-1.44c.398 0 .758.161 1.018.422.256.251.415.601.415.988v.029-.001zm-7.84-3.44-1.195-.008q-1.086-.008-1.649 0t-1.508.047c-.585.02-1.14.078-1.683.17l.073-.01c-.425.07-.802.17-1.163.303l.043-.014c-1.044.425-1.857 1.237-2.272 2.254l-.01.027c-.119.318-.219.695-.284 1.083l-.005.037c-.082.469-.14 1.024-.159 1.589l-.001.021q-.039.946-.047 1.508t0 1.649.008 1.195-.008 1.195 0 1.649.047 1.508c.02.585.078 1.14.17 1.683l-.01-.073c.07.425.17.802.303 1.163l-.014-.043c.425 1.044 1.237 1.857 2.254 2.272l.027.01c.318.119.695.219 1.083.284l.037.005c.469.082 1.024.14 1.588.159l.021.001q.946.039 1.508.047t1.649 0l1.188-.024 1.195.008q1.086.008 1.649 0t1.508-.047c.585-.02 1.14-.078 1.683-.17l-.073.01c.425-.07.802-.17 1.163-.303l-.043.014c1.044-.425 1.857-1.237 2.272-2.254l.01-.027c.119-.318.219-.695.284-1.083l.005-.037c.082-.469.14-1.024.159-1.588l.001-.021q.039-.946.047-1.508t0-1.649-.008-1.195.008-1.195 0-1.649-.047-1.508c-.02-.585-.078-1.14-.17-1.683l.01.073c-.07-.425-.17-.802-.303-1.163l.014.043c-.425-1.044-1.237-1.857-2.254-2.272l-.027-.01c-.318-.119-.695-.219-1.083-.284l-.037-.005c-.469-.082-1.024-.14-1.588-.159l-.021-.001q-.946-.039-1.508-.047t-1.649 0zm11.993 9.846q0 3.578-.08 4.953c.005.101.009.219.009.337 0 3.667-2.973 6.64-6.64 6.64-.119 0-.237-.003-.354-.009l.016.001q-1.375.08-4.953.08t-4.953-.08c-.101.005-.219.009-.337.009-3.667 0-6.64-2.973-6.64-6.64 0-.119.003-.237.009-.354l-.001.016q-.08-1.375-.08-4.953t.08-4.953c-.005-.101-.009-.219-.009-.337 0-3.667 2.973-6.64 6.64-6.64.119 0 .237.003.354.009l-.016-.001q1.375-.08 4.953-.08t4.953.08c.101-.005.219-.009.337-.009 3.667 0 6.64 2.973 6.64 6.64 0 .119-.003.237-.009.354l.001-.016q.08 1.374.08 4.953z"
- />
-                            </svg>
-                          </a>
-                          <a href="https://linkedin.com/company/53401792">
-                            <svg
-                            fill="currentColor"
- width="800px"
- height="800px"
- viewBox="0 -0.5 25 25"
- xmlns="http://www.w3.org/2000/svg"
- ><path
- d="m5.706 7.798v16.202h-5.395v-16.202zm.343-5.002c.001.029.002.063.002.098 0 .749-.318 1.423-.826 1.895l-.002.001c-.545.498-1.274.803-2.075.803-.049 0-.099-.001-.148-.003h.007-.033c-.041.002-.089.003-.137.003-.784 0-1.496-.306-2.025-.804l.001.001c-.504-.488-.816-1.17-.816-1.925 0-.024 0-.048.001-.073v.004c-.001-.021-.001-.045-.001-.069 0-.762.324-1.448.841-1.929l.002-.001c.544-.495 1.271-.799 2.068-.799.046 0 .091.001.137.003h-.006c.043-.002.092-.003.143-.003.785 0 1.5.303 2.034.798l-.002-.002c.515.497.835 1.193.835 1.964v.042-.002zm19.062 11.92v9.284h-5.378v-8.665c.005-.079.007-.171.007-.263 0-.896-.249-1.733-.682-2.447l.012.021c-.427-.596-1.117-.979-1.896-.979-.06 0-.12.002-.18.007h.008c-.027-.001-.058-.002-.089-.002-.62 0-1.19.213-1.641.57l.006-.004c-.453.367-.808.836-1.032 1.375l-.008.023c-.116.355-.182.763-.182 1.187 0 .048.001.096.003.144v-.007 9.042h-5.378q.033-6.523.033-10.578t-.016-4.839l-.016-.785h5.378v2.354h-.033c.214-.345.435-.644.678-.924l-.008.009c.281-.309.583-.588.908-.838l.016-.012c.404-.311.878-.555 1.392-.704l.03-.007c.538-.161 1.157-.254 1.797-.254h.079-.004c.071-.003.154-.005.237-.005 1.681 0 3.195.714 4.256 1.856l.003.004q1.702 1.856 1.702 5.436z"
- />
-                            </svg>
-                          </a>
-                          <a href="https://youtube.com/channel/UCVFv7Z_5n_CNZBZJVcnkn-g">
-                            <svg
-                                fill="currentColor"
-                                width="800px"
-                                height="800px"
-                                viewBox="0 -5 34 34"
-                                xmlns="http://www.w3.org/2000/svg"
-                                ><path
-                                     d="m13.544 16.419 9.216-4.762-9.216-4.818zm3.524-16.419q3.2 0 6.181.086t4.371.181l1.39.08q.019 0 .32.029c.167.013.317.033.465.061l-.026-.004q.134.029.448.086c.205.035.388.088.561.158l-.018-.006q.229.095.534.248c.225.114.419.238.599.377l-.008-.006c.203.158.383.323.549.502l.003.003c.102.107.199.222.288.342l.007.01c.202.318.388.686.537 1.071l.015.044c.24.559.417 1.207.501 1.885l.004.035q.152 1.219.24 2.6t.105 2.16v3.352c.001.078.001.171.001.263 0 1.853-.125 3.678-.367 5.465l.023-.208c-.086.704-.255 1.344-.498 1.946l.018-.051c-.162.447-.368.834-.62 1.186l.01-.015-.266.32c-.169.182-.349.347-.542.497l-.01.008c-.171.134-.365.254-.571.353l-.019.008q-.305.143-.534.24c-.156.064-.338.117-.527.15l-.016.002q-.314.057-.457.086t-.438.057-.314.029q-4.775.372-11.937.372-3.943-.038-6.848-.124t-3.819-.143l-.934-.08-.686-.08c-.404-.05-.757-.117-1.102-.204l.062.013c-.376-.118-.697-.253-1.003-.415l.032.015c-.417-.205-.772-.467-1.075-.78l-.001-.001c-.102-.107-.199-.222-.288-.342l-.007-.01c-.202-.318-.388-.686-.537-1.071l-.015-.044c-.24-.559-.417-1.207-.501-1.885l-.004-.035q-.152-1.219-.24-2.6t-.105-2.16v-3.352c-.001-.078-.001-.171-.001-.263 0-1.853.125-3.678.367-5.465l-.023.208c.086-.704.255-1.344.498-1.946l-.018.051c.162-.447.368-.834.62-1.186l-.01.015.266-.32c.169-.182.349-.347.542-.497l.01-.008c.172-.134.365-.257.57-.362l.021-.01q.305-.152.534-.248c.156-.064.338-.117.527-.15l.016-.002q.314-.057.448-.086c.121-.024.271-.044.424-.056l.015-.001q.305-.029.32-.029 4.783-.35 11.946-.35z"
- />
-                            </svg>
-                          </a>
+                </nav>
+                <!-- End mobile main menu -->
+                <header class="header header-minimal">
+                    <nav class="header-fixed">
+                        <div class="container">
+                            <div class="row flex-nowrap align-items-center justify-content-between">
+                                <div class="col-auto header-fixed-col logo-wrapper">
+                                    <a href="{% url 'index' %}" class="logo" title="FEA.dev">
+                                        <img src="{% static "feadev/img/logo-dev-nav.png" %}" width="115" height="36" alt="FEA.dev">
+                                    </a>
+                                </div>
+                                <div class="col-auto col-xl col-static header-fixed-col d-none d-xl-block">
+                                    <div class="row flex-nowrap align-items-center justify-content-end">
+                                        <div class="col header-fixed-col d-none d-xl-block col-static">
+                                            <!-- Begin main menu -->
+                                            <nav class="main-mnu">
+                                                <ul class="main-mnu-list">
+                                                    <li>
+                                                        <a href="{% url 'index' %}" data-title="Home">
+                                                            <span>Home</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{% url 'sobre' %}" data-title="Sobre Nós">
+                                                            <span>Sobre Nós</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"
+                                                           data-bs-toggle="dropdown"
+                                                           aria-expanded="false"
+                                                           data-title='Atividades'>
+                                                            <span>Atividades</span>
+                                                        </a>
+                                                        <ul class="dropdown-menu"
+                                                            aria-labelledby="dropdownMenuLink"
+                                                            style='background-color: var(--background-color)'>
+                                                            <li>
+                                                                <a class="dropdown-item" href="{% url 'projetos' %}">Projetos</a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item" href="{% url 'eventos' %}">Eventos</a>
+                                                            </li>
+                                                            <li>
+                                                                <hr class="dropdown-divider"
+                                                                    style="background-color: var(--text-primary)">
+                                                            </li>
+                                                            <li>
+                                                                <a class="dropdown-item" href="{% url 'grupos' %}">Grupos de Estudo</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{% url 'cursos' %}" data-title="Cursos">
+                                                            <span>Cursos</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{% url 'processo_seletivo' %}" data-title="Processo Seletivo">
+                                                            <span>Processo Seletivo</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{% url 'contato' %}" data-title="Contato">
+                                                            <span>Contato</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            <!-- End main menu -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto d-block d-xl-none header-fixed-col">
+                                    <div class="main-mnu-btn">
+                                        <span class="bar bar-1"></span>
+                                        <span class="bar bar-2"></span>
+                                        <span class="bar bar-3"></span>
+                                        <span class="bar bar-4"></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </ul>
                     </nav>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <div class="container">
-              <div class="row justify-content-between items"></div>
-            </div>
-          </div>
-        </footer><!-- End footer -->
-
-	  </main><!-- End main -->
-
-	  <script src="{% static 'feadev/libs/jquery/jquery.min.js' %}"></script>
-	  <script src="{% static 'feadev/libs/lozad/lozad.min.js' %}"></script>
-	  <script src="{% static 'feadev/libs/device/device.js' %}"></script>
-	  <script src="{% static 'feadev/libs/spincrement/jquery.spincrement.min.js' %}"></script>
-	  <script src="{% static 'feadev/libs/pristine/pristine.min.js' %}"></script>
-	  <script src="{% static 'feadev/js/custom.js' %}"></script>
-	  <script src="{% static 'feadev/js/forms.js' %}"></script>
-	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  </body></html>
+                </header>
+                <!-- Begin content -->
+                {% block content %}{% endblock %}
+                <!-- Begin footer -->
+                <footer class="footer footer-minimal">
+                    <div class="footer-main">
+                        <div class="container">
+                            <div class="row items align-items-center">
+                                <div class="col-lg-3 col-md-4 col-12 item">
+                                    <div class="widget-brand-info">
+                                        <div class="widget-brand-info-main">
+                                            <a href="index.html" class="logo" title="PathSoft">
+                                                <img src="{% static "feadev/img/logo-dev-nav.png" %}" class="lazy" width="133" height="36" alt="FEA.dev" data-loaded="true" style="opacity: 1;">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md item">
+                                    <div class="footer-item">
+                                        <nav class="footer-nav">
+                                            <ul class="footer-mnu footer-mnu-line">
+                                                <div class="social-icons">
+                                                    <a href="www.instagram.com/fea.dev">
+                                                        <svg fill="currentColor"
+                                                             width="800px"
+                                                             height="800px"
+                                                             viewBox="0 0 24 24"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="m16 12v-.001c0-2.209-1.791-4-4-4s-4 1.791-4 4 1.791 4 4 4c1.104 0 2.104-.448 2.828-1.171.723-.701 1.172-1.682 1.172-2.768 0-.021 0-.042-.001-.063v.003zm2.16 0c-.012 3.379-2.754 6.114-6.135 6.114-3.388 0-6.135-2.747-6.135-6.135s2.747-6.135 6.135-6.135c1.694 0 3.228.687 4.338 1.797 1.109 1.08 1.798 2.587 1.798 4.256 0 .036 0 .073-.001.109v-.005zm1.687-6.406v.002c0 .795-.645 1.44-1.44 1.44s-1.44-.645-1.44-1.44.645-1.44 1.44-1.44c.398 0 .758.161 1.018.422.256.251.415.601.415.988v.029-.001zm-7.84-3.44-1.195-.008q-1.086-.008-1.649 0t-1.508.047c-.585.02-1.14.078-1.683.17l.073-.01c-.425.07-.802.17-1.163.303l.043-.014c-1.044.425-1.857 1.237-2.272 2.254l-.01.027c-.119.318-.219.695-.284 1.083l-.005.037c-.082.469-.14 1.024-.159 1.589l-.001.021q-.039.946-.047 1.508t0 1.649.008 1.195-.008 1.195 0 1.649.047 1.508c.02.585.078 1.14.17 1.683l-.01-.073c.07.425.17.802.303 1.163l-.014-.043c.425 1.044 1.237 1.857 2.254 2.272l.027.01c.318.119.695.219 1.083.284l.037.005c.469.082 1.024.14 1.588.159l.021.001q.946.039 1.508.047t1.649 0l1.188-.024 1.195.008q1.086.008 1.649 0t1.508-.047c.585-.02 1.14-.078 1.683-.17l-.073.01c.425-.07.802-.17 1.163-.303l-.043.014c1.044-.425 1.857-1.237 2.272-2.254l.01-.027c.119-.318.219-.695.284-1.083l.005-.037c.082-.469.14-1.024.159-1.588l.001-.021q.039-.946.047-1.508t0-1.649-.008-1.195.008-1.195 0-1.649-.047-1.508c-.02-.585-.078-1.14-.17-1.683l.01.073c-.07-.425-.17-.802-.303-1.163l.014.043c-.425-1.044-1.237-1.857-2.254-2.272l-.027-.01c-.318-.119-.695-.219-1.083-.284l-.037-.005c-.469-.082-1.024-.14-1.588-.159l-.021-.001q-.946-.039-1.508-.047t-1.649 0zm11.993 9.846q0 3.578-.08 4.953c.005.101.009.219.009.337 0 3.667-2.973 6.64-6.64 6.64-.119 0-.237-.003-.354-.009l.016.001q-1.375.08-4.953.08t-4.953-.08c-.101.005-.219.009-.337.009-3.667 0-6.64-2.973-6.64-6.64 0-.119.003-.237.009-.354l-.001.016q-.08-1.375-.08-4.953t.08-4.953c-.005-.101-.009-.219-.009-.337 0-3.667 2.973-6.64 6.64-6.64.119 0 .237.003.354.009l-.016-.001q1.375-.08 4.953-.08t4.953.08c.101-.005.219-.009.337-.009 3.667 0 6.64 2.973 6.64 6.64 0 .119-.003.237-.009.354l.001-.016q.08 1.374.08 4.953z" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="https://linkedin.com/company/53401792">
+                                                        <svg fill="currentColor"
+                                                             width="800px"
+                                                             height="800px"
+                                                             viewBox="0 -0.5 25 25"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="m5.706 7.798v16.202h-5.395v-16.202zm.343-5.002c.001.029.002.063.002.098 0 .749-.318 1.423-.826 1.895l-.002.001c-.545.498-1.274.803-2.075.803-.049 0-.099-.001-.148-.003h.007-.033c-.041.002-.089.003-.137.003-.784 0-1.496-.306-2.025-.804l.001.001c-.504-.488-.816-1.17-.816-1.925 0-.024 0-.048.001-.073v.004c-.001-.021-.001-.045-.001-.069 0-.762.324-1.448.841-1.929l.002-.001c.544-.495 1.271-.799 2.068-.799.046 0 .091.001.137.003h-.006c.043-.002.092-.003.143-.003.785 0 1.5.303 2.034.798l-.002-.002c.515.497.835 1.193.835 1.964v.042-.002zm19.062 11.92v9.284h-5.378v-8.665c.005-.079.007-.171.007-.263 0-.896-.249-1.733-.682-2.447l.012.021c-.427-.596-1.117-.979-1.896-.979-.06 0-.12.002-.18.007h.008c-.027-.001-.058-.002-.089-.002-.62 0-1.19.213-1.641.57l.006-.004c-.453.367-.808.836-1.032 1.375l-.008.023c-.116.355-.182.763-.182 1.187 0 .048.001.096.003.144v-.007 9.042h-5.378q.033-6.523.033-10.578t-.016-4.839l-.016-.785h5.378v2.354h-.033c.214-.345.435-.644.678-.924l-.008.009c.281-.309.583-.588.908-.838l.016-.012c.404-.311.878-.555 1.392-.704l.03-.007c.538-.161 1.157-.254 1.797-.254h.079-.004c.071-.003.154-.005.237-.005 1.681 0 3.195.714 4.256 1.856l.003.004q1.702 1.856 1.702 5.436z" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="https://youtube.com/channel/UCVFv7Z_5n_CNZBZJVcnkn-g">
+                                                        <svg fill="currentColor"
+                                                             width="800px"
+                                                             height="800px"
+                                                             viewBox="0 -5 34 34"
+                                                             xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="m13.544 16.419 9.216-4.762-9.216-4.818zm3.524-16.419q3.2 0 6.181.086t4.371.181l1.39.08q.019 0 .32.029c.167.013.317.033.465.061l-.026-.004q.134.029.448.086c.205.035.388.088.561.158l-.018-.006q.229.095.534.248c.225.114.419.238.599.377l-.008-.006c.203.158.383.323.549.502l.003.003c.102.107.199.222.288.342l.007.01c.202.318.388.686.537 1.071l.015.044c.24.559.417 1.207.501 1.885l.004.035q.152 1.219.24 2.6t.105 2.16v3.352c.001.078.001.171.001.263 0 1.853-.125 3.678-.367 5.465l.023-.208c-.086.704-.255 1.344-.498 1.946l.018-.051c-.162.447-.368.834-.62 1.186l.01-.015-.266.32c-.169.182-.349.347-.542.497l-.01.008c-.171.134-.365.254-.571.353l-.019.008q-.305.143-.534.24c-.156.064-.338.117-.527.15l-.016.002q-.314.057-.457.086t-.438.057-.314.029q-4.775.372-11.937.372-3.943-.038-6.848-.124t-3.819-.143l-.934-.08-.686-.08c-.404-.05-.757-.117-1.102-.204l.062.013c-.376-.118-.697-.253-1.003-.415l.032.015c-.417-.205-.772-.467-1.075-.78l-.001-.001c-.102-.107-.199-.222-.288-.342l-.007-.01c-.202-.318-.388-.686-.537-1.071l-.015-.044c-.24-.559-.417-1.207-.501-1.885l-.004-.035q-.152-1.219-.24-2.6t-.105-2.16v-3.352c-.001-.078-.001-.171-.001-.263 0-1.853.125-3.678.367-5.465l-.023.208c.086-.704.255-1.344.498-1.946l-.018.051c.162-.447.368-.834.62-1.186l-.01.015.266-.32c.169-.182.349-.347.542-.497l.01-.008c.172-.134.365-.257.57-.362l.021-.01q.305-.152.534-.248c.156-.064.338-.117.527-.15l.016-.002q.314-.057.448-.086c.121-.024.271-.044.424-.056l.015-.001q.305-.029.32-.029 4.783-.35 11.946-.35z" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <p>
+                                    Somos a FEA.dev, a primeira organização estudantil de programação na
+                                    FEA-USP. Nossa missão é promover o aprendizado e a prática de programação
+                                    entre estudantes e conectá-los ao mercado de trabalho.
+                                </p>
+                                <p>© 2024 FEA.dev - Todos os direitos reservados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <div class="container">
+                            <div class="row justify-content-between items"></div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End footer -->
+            </main>
+            <!-- End main -->
+            <script src="{% static 'feadev/libs/jquery/jquery.min.js' %}"></script>
+            <script src="{% static 'feadev/libs/lozad/lozad.min.js' %}"></script>
+            <script src="{% static 'feadev/libs/device/device.js' %}"></script>
+            <script src="{% static 'feadev/libs/spincrement/jquery.spincrement.min.js' %}"></script>
+            <script src="{% static 'feadev/libs/pristine/pristine.min.js' %}"></script>
+            <script src="{% static 'feadev/js/custom.js' %}"></script>
+            <script src="{% static 'feadev/js/forms.js' %}"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+    </html>
