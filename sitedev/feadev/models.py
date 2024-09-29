@@ -24,6 +24,8 @@ class Area(models.Model):
         return self.nome
 
 class Projeto(models.Model):
+    titulo = models.CharField(max_length=100)
+    descricao = models.TextField(max_length=500, default="Clique para acessar o projeto")
     tipo = models.CharField(max_length=100)
     grupo = models.ManyToManyField(Grupo, related_name="projetos", blank=True)
     area = models.ForeignKey(Area, on_delete=models.CASCADE, related_name="projetos", blank=True, null=True)
@@ -34,7 +36,7 @@ class Projeto(models.Model):
 
 class User(AbstractUser):
     posicao = models.ForeignKey(Posicao, on_delete=models.CASCADE, related_name="users", default=None, blank=True, null=True)
-    grupo = models.ManyToManyField(Grupo, related_name="users", blank=True)
+    grupo = models.ManyToManyField(Grupo, related_name="users", blank=True, null=True)
     area = models.ForeignKey(Area, on_delete=models.CASCADE, related_name="users", default=None, blank=True, null=True)
     n_usp = models.IntegerField(primary_key=True)
     data_nascimento = models.DateField()
@@ -45,7 +47,7 @@ class User(AbstractUser):
     projetos = models.ManyToManyField(Projeto, related_name="users", blank=True)
 
     def __str__(self):
-        return self.username
+        return self.username    
 
 class Cargo(models.Model):
     cargo = models.CharField(max_length=30)
