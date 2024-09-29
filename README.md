@@ -7,8 +7,12 @@
 
 [Leia a Documetação](https://docs.djangoproject.com/en/4.2/)
 
+<strong> Entrar na pasta sitedev: </strong>
+```bash
+cd sitedev
+```
 
-<strong> Para criar um novo ambiente virtual : </strong>
+<br><strong> Para criar um novo ambiente virtual : </strong>
 ```bash	
 python -m venv venv
 ```
@@ -18,6 +22,11 @@ python -m venv venv
 ```bash	
 venv\Scripts\activate
 ```
+
+<br><strong> Para ativar o ambiente virtual no Git Bash: </strong>
+```bash
+source venv/Scripts/activate
+```	
 
 
 <br><strong> Para ativar o ambiente virtual no macOS e Linux: </strong>
